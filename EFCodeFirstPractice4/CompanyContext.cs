@@ -9,6 +9,8 @@ namespace EFCodeFirstPractice4
 {
     public class CompanyContext : DbContext
     {
+        public CompanyContext() : base("CompanyDB") { }
+
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Team> Teams { get; set; }
         public DbSet<Club> Clubs { get; set; }
